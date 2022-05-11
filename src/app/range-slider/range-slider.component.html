@@ -1,0 +1,6 @@
+<div class="rangeSlider">
+   <span (click)="doSliderAction(RangeSlideAction.REDUCE)" class="rangeSlider__actionButton">-</span>
+   <input type="range" [min]="min" [max]="max" [step] ="step" 
+   [value]="value" class="rangeSlider__input" (input)="updateValue($event)">
+   <span (click)="doSliderAction(RangeSlideAction.ADD)" class="rangeSlider__actionButton">+</span>
+</div>

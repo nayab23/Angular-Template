@@ -1,0 +1,12 @@
+<h1>Angular 9 Cropperjs</h1>
+<button (click)="openModal(modalId + '-1')">Open Cropp Modal</button>
+<jw-modal id="{{modalId + '-1'}}">
+  <h1>Cropperjs angular</h1>
+  <app-cropper (cropped)="showCroppResult($event)" (closed)="closeModal(modalId + '-1')"></app-cropper>
+</jw-modal>
+<jw-modal id="{{modalId}}">
+  <div *ngIf="src">
+    <h1>Cropper Result</h1>
+    <img *ngIf="src" [src]="src"><br>
+  </div>
+</jw-modal>

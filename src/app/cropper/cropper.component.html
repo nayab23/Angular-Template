@@ -1,0 +1,22 @@
+<div class="cropper">
+    <div class="cropper__imageContainer">
+      <div *ngIf="!processing; then cropper else loader"></div>
+      <ng-template #cropper>
+        <div class="cropper__image">
+          <img #image [src]="imgUrl"
+          (load)="imageLoaded($event)" (error)="imageLoadError($event)" />
+        </div>
+        <div class="cropper__zoomSlider">
+          <app-range-slider [value]="zoomValue" (changed)="setZoom($event)"></app-range-slider>
+        </div>
+      </ng-template>
+      <ng-template #loader>
+        <app-loader></app-loader>
+      </ng-template>
+    </div>
+   <div class="cropper__actions">
+      <button (click)="close()" class="cropper__button cropper__button--cancel">Cancel</button>
+      <button (click)="exportCanvas()" class="cropper__button">Apply</button>
+   </div>
+</div>
+{{zoomValue}}

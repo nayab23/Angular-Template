@@ -1,0 +1,46 @@
+  .rangeSlider{
+
+    &__input{
+      -webkit-appearance: none;
+      height: 4px;
+      background: #e9e9ec;
+      outline: none;
+      opacity: 0.7;
+      width: 181px;
+      border-radius: 6px;
+      background-color: rgba(0, 0, 0, 0.04);
+      -webkit-transition: .2s;
+      transition: opacity .2s;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: solid 2px #6872f4;
+        background: white;
+        cursor: pointer;
+      }
+
+      &::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: solid 2px #6872f4;
+        cursor: pointer;
+      }
+    }
+
+    &__actionButton{
+      padding: 0 5px;
+      font-size: 1rem;
+      font-weight: 500;
+      color:#6872f4;
+      cursor: pointer;
+    }
+  }
